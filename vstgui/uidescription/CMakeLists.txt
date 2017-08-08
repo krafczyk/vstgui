@@ -103,6 +103,6 @@ endif()
 find_package(EXPAT)
 if(EXPAT_FOUND)
   target_compile_definitions(${target} ${VSTGUI_COMPILE_DEFINITIONS} "VSTGUI_USE_SYSTEM_EXPAT")
-  target_link_libraries(${target} PRIVATE EXPAT)
+  target_link_libraries(${target} PRIVATE ${EXPAT_LIBRARY})
 endif()
 
